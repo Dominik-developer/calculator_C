@@ -3,41 +3,30 @@
 // Addition
 float addition(float num1, float num2) {
 
-    float result;
-
-    result = num1 + num2;
-
-    return result;
+    return num1 + num2;
 }
 
 // Subtraction
 float subtraction(float num1, float num2) {
 
-    float result;
-
-    result = num1 - num2;
-
-    return result;
+    return num1 - num2;
 }
 
 // Multiplication
 float multiplication(float num1, float num2) {
 
-    float result;
-
-    result = num1 * num2;
-
-    return result;
+    return num1 * num2;
 }
 
 // Division
 float division(float num1, float num2){
 
-    float result;
+    if(num2 == 0) {
+        printf("\n Error: Division by zero is not allowed.");
+        return 0;
+    }
 
-    result = num1 / num2;
-
-    return result;
+    return num1 / num2;
 }
 
 
@@ -51,10 +40,10 @@ int main() {
     printf("Choose what do you want to do? \n");
 
     // mathematical operations
-    printf("Addition - write 1");
-    printf("Subtraction - write 2");
-    printf("Multiplication - write 3");
-    printf("Division - write 4");
+    printf("Addition - write 1 \n");
+    printf("Subtraction - write 2 \n");
+    printf("Multiplication - write 3 \n");
+    printf("Division - write 4 \n");
         scanf("%d", &choice);
 
     // numbers
@@ -84,12 +73,12 @@ int main() {
             break;
 
         default:
-            printf("Wrong operation!");
+            printf("\n Error: wrong operation chosen!");
             return 1;  // ending with error
     }
 
     // showing result
-    printf("Result of your operation: %.2f ", result);
+    printf("\n Result of your operation: %.2f ", result);
 
     return 0; // ending with success
 }
